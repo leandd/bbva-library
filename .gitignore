@@ -1,1 +1,10 @@
-/target/
+######## Maven  ########
+target/
+
+####### Persistence ########
+local_db.bin
+
+######## Eclipse ########
+.classpath
+.project
+.settings/
