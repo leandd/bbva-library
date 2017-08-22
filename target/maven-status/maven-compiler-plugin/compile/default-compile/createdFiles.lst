@@ -1,0 +1,7 @@
+com/atsistemas/beans/Book.class
+com/atsistemas/dao/BookDAO.class
+com/atsistemas/rest/CustomJacksonJsonProvider.class
+com/atsistemas/config/ObjectifyConfig.class
+com/atsistemas/dao/BookDAO$1.class
+com/atsistemas/rest/CustomJacksonJsonProvider$1.class
+com/atsistemas/rest/BookResource.class
