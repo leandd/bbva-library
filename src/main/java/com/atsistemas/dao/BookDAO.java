@@ -1,6 +1,5 @@
 package com.atsistemas.dao;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -10,19 +9,11 @@ import com.googlecode.objectify.ObjectifyService;
 public class BookDAO {
 
 	private static final Logger LOGGER = Logger.getLogger(BookDAO.class.getName());
-	private static Comparator<Book> bookComparator = new Comparator<Book>() {
-		
-		@Override
-		public int compare(Book o1, Book o2) {
-			// TODO Auto-generated method stub
-			return o1.getAuthor().compareTo(o2.getAuthor());
-		}
-	};
+
 	
 	public List<Book> list() {
         LOGGER.info("Retrieving list of books sorted by Author");
         List<Book> listBooks = ObjectifyService.ofy().load().type(Book.class).list();
-        listBooks.sort(bookComparator);
         return listBooks;
     }
 	
