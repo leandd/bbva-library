@@ -13,7 +13,7 @@ public class BookDAO {
 	
 	public List<Book> list() {
         LOGGER.info("Retrieving list of books sorted by Author");
-        List<Book> listBooks = ObjectifyService.ofy().load().type(Book.class).list();
+        List<Book> listBooks = ObjectifyService.ofy().load().type(Book.class).order("author").list();
         return listBooks;
     }
 	
